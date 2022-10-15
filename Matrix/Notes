@@ -1,0 +1,10 @@
+Matrix is a 2-dimensional array which stores data in rows and columns.
+Initialisation can be in multiple ways
+
+int[][] matrix = new int[][];
+
+int matrix[][] = new int[][];
+
+final int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 },{ 7, 8, 9 } };
+
+ System.out.println("\n"); - For Next Line break
