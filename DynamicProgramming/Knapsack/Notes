@@ -1,0 +1,20 @@
+DP
+
+3 Types
+
+1. Fractional Knapsack.   — >This is greedy approach
+2. 0/1 Knapsack.  —> Either we will take 1 time this item or 0 time
+3. Unbounded knapsack. —> In this item can be picked up any number of times
+
+0/1 Knapsack can be done in three ways
+
+N is number of items
+W is the Total weight of knapsack
+
+Normal Recursion.  — TC — O(2^N) SC — O(N)
+Recursion with Memoization. — TC —>  O(N*W).  SC —>  O(N*W) + O(N)   —> O(M*N) for the matrix which we created with initialised as -1 and
+Top Down Approach DP —> TC —>  O(N*W)  , SC —> O(N*W)
+
+For MAtrix take the parameters which are changing like Weight and Numer of elements
+W, N
+And matrix size would be always [N+1][W+1]
