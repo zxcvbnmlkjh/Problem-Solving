@@ -9,7 +9,8 @@ public class DeletionHeap
         return n;
     }
 
-    public void heapify (int [] arr, int i, int n) {
+    public void heapify (int [] arr, int i, int n)
+    {
         int lc = (2*i)+1;
         int rc = (2*i)+2;
         int largest = i;
