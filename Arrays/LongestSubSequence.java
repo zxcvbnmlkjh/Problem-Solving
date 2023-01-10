@@ -5,7 +5,7 @@ import java.util.Set;
 public class LongestSubSequence {
 
     public static void main(String[] args) {
-        int[] arr = {0,3,7,2,5,8,4,6,0,1};
+        int[] arr = {100,4,200,1,3,2};
         LongestSubSequence subSequence = new LongestSubSequence();
         System.out.println("Longest Subsequence value is: "+ subSequence.longestConsecutive(arr));
     }
@@ -24,9 +24,8 @@ public class LongestSubSequence {
             boolean flag = true;
             int count = 1;
             int p = 1;
-            if(set.contains(nums[i]+p)) {
-                count++;
-                while(set.contains(nums[i]+p+1))
+            if(!set.contains(nums[i]-p)) {
+                while(set.contains(nums[i]+p))
                 {
                     p++;
                     count++;

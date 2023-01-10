@@ -13,8 +13,8 @@ public class KnapSackDP
         KnapSackDP dp = new KnapSackDP();
         System.out.println("Max Profit is==== " + dp.getProfitByDP(value, wt, Weight , N));
     }
-    public int getProfitByDP (int[] val, int[] wt, int W, int N) {
-
+    public int getProfitByDP (int[] val, int[] wt, int W, int N)
+    {
         int K[][] = new int[N + 1][W + 1];
         for(int i=0; i<N+1;i++) {
             for(int j=0; j<W+1; j++) {

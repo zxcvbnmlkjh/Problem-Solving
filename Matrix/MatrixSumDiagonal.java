@@ -1,7 +1,10 @@
 public class MatrixSumDiagonal
 {
     public static void main(String[] args) {
-        int mat[][] = {{1,2,3},{4,5,6},{7,8,9}};
+        int mat[][] = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}};
         MatrixSumDiagonal sum = new MatrixSumDiagonal();
         System.out.println(sum.getSum(mat));
 

@@ -33,7 +33,7 @@ public class CollectionsDemo
 
         String[] str = new String[4];
         int[] arr = new int[5];
-        Employee[] empArr = new Employee[5];
+        //Employee[] empArr = new Employee[5];
 
         Set set = new HashSet<>();
         set.add("Pinku");
