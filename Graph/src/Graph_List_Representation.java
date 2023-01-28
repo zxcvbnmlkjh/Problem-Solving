@@ -1,3 +1,10 @@
+/**
+ * Two ways of representing graph
+ * Adjacency Matrix -- We create matrix of m*n
+ * Adjacency List  -- We create a list<List<Integer> or HashMap<Integer, List<Integer>>
+ *
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
