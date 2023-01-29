@@ -8,7 +8,7 @@ public class DecToBinary
         DecToBinary dec = new DecToBinary();
         List<Integer> resultList = dec.decimalToBinary(num);
         for(int i=resultList.size()-1;i>=0;i--){
-            System.out.print(resultList.get(i) +  );
+            System.out.print(resultList.get(i));
         }
     }
     public List<Integer> decimalToBinary(int n) {
