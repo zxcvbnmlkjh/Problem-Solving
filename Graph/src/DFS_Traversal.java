@@ -25,7 +25,7 @@ public class DFS_Traversal {
     public void traverse(List<List<Integer>> list, int i) {
 
         boolean[] visited = new boolean[list.size()];
-       dfs(list, visited, i);
+        dfs(list, visited, i);
 
     }
 

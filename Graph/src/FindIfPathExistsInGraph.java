@@ -2,6 +2,10 @@ import java.util.*;
 
 /**
  * This will check if path exists between source and destination
+ * Find Path if exists - we run breadth first search putting element in queue
+ * At the end if the visitedArray has that position as untouched that means
+ * There is no path otherwise path exists.
+ *
  */
 public class FindIfPathExistsInGraph
 {

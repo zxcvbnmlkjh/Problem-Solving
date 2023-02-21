@@ -37,7 +37,10 @@ public class DFSTraversalIterative
         Stack<Integer> stack = new Stack();
         stack.push(i);
         visited[i] = true;
-        while(!stack.isEmpty()) {
+
+
+
+
             int elem = stack.pop();
             System.out.println(elem + " ");
             List<Integer> elemList = list.get(elem);
@@ -50,4 +53,4 @@ public class DFSTraversalIterative
         }
 
     }
-}
+
