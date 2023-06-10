@@ -19,10 +19,11 @@ public class FindSingleElementInArray
 {
     public static void main (String[] args)
     {
-        int[] arr = {3,3,7,7,10,11,11};
+        int[] arr = {3,3,7,7,9,10,10,11,11};
         FindSingleElementInArray findSingleElementInArray = new FindSingleElementInArray();
         //System.out.println("Element is "+findSingleElementInArray.findSingleElementUsingForLoop(arr));
-        System.out.println("Element is "+findSingleElementInArray.findSingleElementUsingXOR(arr));
+        //System.out.println("Element is "+findSingleElementInArray.findSingleElementUsingXOR(arr));
+        System.out.println("Element is "+findSingleElementInArray.findSingleElementLogN(arr));
     }
 
     // First Approach
@@ -43,5 +44,32 @@ public class FindSingleElementInArray
             num = num ^ arr[i];
         }
         return num;
+    }
+
+    // Third Approach with O(logn) complexity
+    public int findSingleElementLogN(int[] nums) {
+
+        int low = 0;
+        int high = nums.length-1;
+        while(low<high) {
+            int mid = (low+high)/2;
+
+            System.out.println("Mid value is:"+ nums[mid]);
+            if(mid%2 == 0) {
+                if(nums[mid+1] != nums[mid]){
+                    low = mid+1;
+                } else {
+                    high = mid-1;
+                }
+            } else {
+                if(nums[mid-1] != nums[mid]) {
+                    high = mid-1;
+                } else {
+                    low = mid+1;
+                }
+            }
+
+        }
+        return nums[low];
     }
 }

@@ -1,4 +1,8 @@
 // To check next smaller element of an array start from the end and start traversiong towards left and find next smallest element.
+
+// solution would be usinf stack and storing element in incresing order in case PSE
+// In case of previous greater element store element in decreasing order.
+
 import java.util.Stack;
 
 public class NextSmallerElement
