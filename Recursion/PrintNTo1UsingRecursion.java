@@ -4,7 +4,6 @@ public class PrintNTo1UsingRecursion
         PrintNTo1UsingRecursion printNTo1UsingRecursion = new PrintNTo1UsingRecursion();
         printNTo1UsingRecursion.print(10);
     }
-
     void print(int N) {
         if(N < 1) {
             return;

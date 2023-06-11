@@ -1,5 +1,4 @@
-import static sun.security.krb5.internal.LoginOptions.MAX;
-
+/*
 
 public class InsertionHeap
 {
@@ -45,3 +44,4 @@ public class InsertionHeap
         insertion.printArray(arr);
     }
 }
+*/
