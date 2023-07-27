@@ -1,3 +1,10 @@
+/**
+ * This is alo called as Breadth first search of tree
+ * We are traversion in breadth wise.
+ * We are covering level by level.
+ *
+ */
+
 import java.util.LinkedList;
 import java.util.Queue;
 

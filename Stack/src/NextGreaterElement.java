@@ -10,7 +10,7 @@ public class NextGreaterElement
         int[] result = ng.getArray(arr);
 
             int j = 0;
-        while(j< result.length-1) {
+        while(j< result.length) {
             System.out.print(result[j] + " ");
             j++;
         }

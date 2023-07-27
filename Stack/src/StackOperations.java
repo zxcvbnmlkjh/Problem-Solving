@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class StackOperations {
 
@@ -13,6 +14,12 @@ public class StackOperations {
         stack.pop();
         stack.pop();
         stack.pop();
+        Stack s = new Stack<>();
+        s.push(1);
+        s.pop();
+        s.peek();
+        Queue q = new LinkedList();
+        q.add(1);
     }
 }
 

@@ -1,4 +1,4 @@
-public class Employee
+public class Employee implements Comparable<Employee>
 {
     private int id;
 
@@ -43,5 +43,10 @@ public class Employee
             this.id = id;
             this.name = name;
             this.address = address;
+    }
+
+    @Override public int compareTo (Employee o)
+    {
+        return this.name.compareTo(o.name);
     }
 }

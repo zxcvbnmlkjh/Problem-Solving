@@ -13,8 +13,8 @@ public class InOrder_Iterative
         root.right.right = new Node(7);
         System.out.print(inOrder(root));
     }
-    public static ArrayList inOrder (Node root) {
-
+    public static ArrayList inOrder (Node root)
+    {
         ArrayList list = new ArrayList();
         Boolean done = true;
         Stack stack = new Stack();

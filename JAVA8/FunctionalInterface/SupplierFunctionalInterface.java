@@ -21,5 +21,6 @@ public class SupplierFunctionalInterface
         // With Lambda --> We have removed SupplierFunctionImpl class.
         Supplier supplierLambda = () -> LocalDateTime.now();
         System.out.println(supplierLambda.get());
+
     }
 }

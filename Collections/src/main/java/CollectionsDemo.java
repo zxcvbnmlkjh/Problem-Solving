@@ -1,3 +1,15 @@
+/**
+ * LinkList maintains insertion order
+ *
+ * Set doesnt maintain insertion Order
+ *
+ * Collection.sort only works with List.
+ *
+ * All the elements in the list must be mutually comparable
+ * ClassCastException: If the list contains elements that are not mutually comparable
+ * using the specified comparator, it will throw ClassCastException.
+ */
+
 import java.util.*;
 
 public class CollectionsDemo
@@ -27,6 +39,7 @@ public class CollectionsDemo
         arrayList.add("Vani");
         arrayList.add("Vani");
         arrayList.add("Vani");
+        arrayList.add("Pinku");
         System.out.println("ArrayList value is:"+ arrayList);
 
         ArrayList<Integer> arrayList1 = new ArrayList<>();
@@ -40,6 +53,7 @@ public class CollectionsDemo
         set.add("Vani");
         set.add("sdsldks");
         set.add("keowie");
+        set.add("Vani");
         System.out.println("Set Value is"+ set);
 
         Set linkSet = new LinkedHashSet();
@@ -47,6 +61,7 @@ public class CollectionsDemo
         linkSet.add("Vani");
         linkSet.add("sdsldks");
         linkSet.add("keowie");
+        linkSet.add("Vani");
         System.out.println("linkSet Value is"+ linkSet);
         Collections.sort(list);
 
