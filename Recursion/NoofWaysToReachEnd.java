@@ -13,7 +13,7 @@ public class NoofWaysToReachEnd
 {
     public static void main (String[] args)
     {
-        System.out.println("No of ways: "+ findWays(4,4));
+        System.out.println("No of ways: "+ findWays(3,3));
     }
     public static int findWays (int n, int m) {
 

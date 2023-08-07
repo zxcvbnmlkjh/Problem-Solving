@@ -22,11 +22,11 @@ public class EmpShallowCloneMain
 
         System.out.println("Emp2 =======  " + emp2);
 
-//        emp2.getCity().add("Pune");
-//        emp2.name = "Sneha";
+        emp2.getCity().add("Pune");
+        emp2.name = "Sneha";
 //
-//        System.out.println("Emp1  " + emp1);
+      System.out.println("Emp1  " + emp1);
 //
-//        System.out.println("Emp2   " + emp2);
+       System.out.println("Emp2   " + emp2);
     }
 }

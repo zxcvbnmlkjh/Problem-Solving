@@ -1,41 +1,43 @@
 public class LongestNonRepeatingString
 {
 
-        // This function returns true if all characters in
-        // str[i..j] are distinct, otherwise returns false
-        public static Boolean areDistinct(String str,
-            int i, int j)
+    public static int longestUniqueSubsttr(String str)
+    {
+        int n = str.length();
+
+        // Result
+        int res = 0;
+
+        for(int i = 0; i < n; i++)
         {
 
             // Note : Default values in visited are false
-            boolean[] visited = new boolean[26];
+            boolean[] visited = new boolean[256];
 
-            for(int k = i; k <= j; k++)
+            for(int j = i; j < n; j++)
             {
-                if (visited[str.charAt(k) - 'a'] == true)
-                    return false;
 
-                visited[str.charAt(k) - 'a'] = true;
+                // If current character is visited
+                // Break the loop
+                if (visited[str.charAt(j)] == true)
+                    break;
+
+                    // Else update the result if
+                    // this window is larger, and mark
+                    // current character as visited.
+                else
+                {
+                    res = Math.max(res, j - i + 1);
+                    visited[str.charAt(j)] = true;
+                }
             }
-            return true;
+
+            // Remove the first character of previous
+            // window
+            visited[str.charAt(i)] = false;
         }
-
-        // Returns length of the longest substring
-        // with all distinct characters.
-        public static int longestUniqueSubsttr(String str)
-        {
-            int n = str.length();
-
-            // Result
-            int res = 0;
-
-            for(int i = 0; i < n; i++)
-                for(int j = i; j < n; j++)
-                    if (areDistinct(str, i, j))
-                        res = Math.max(res, j - i + 1);
-
-            return res;
-        }
+        return res;
+    }
 
         // Driver code
         public static void main(String[] args)

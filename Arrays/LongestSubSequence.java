@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,7 +23,7 @@ public class LongestSubSequence {
             boolean flag = true;
             int count = 1;
             int p = 1;
-            if(!set.contains(nums[i]-p)) {
+            if(!set.contains(nums[i]-p)) {  //4-1 = 3
                 while(set.contains(nums[i]+p))
                 {
                     p++;
