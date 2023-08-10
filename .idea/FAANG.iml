@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Sorting" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Recursion" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JAVA8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BinarySearch" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Snake-and-Ladder/src/snakeAndLadder" />
       <excludeFolder url="file://$MODULE_DIR$/Snake-and-Ladder/bin/snakeAndLadder" />
       <excludeFolder url="file://$MODULE_DIR$/Snake-and-Ladder/src/snakeAndLadder/services" />

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Backtracking/Backtracking.iml" filepath="$PROJECT_DIR$/Backtracking/Backtracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/BinarySearch/BinarySearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/Collections/Collections.iml" filepath="$PROJECT_DIR$/Collections/Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/Design-Patterns/Design-Patterns.iml" filepath="$PROJECT_DIR$/Design-Patterns/Design-Patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/FAANG.iml" filepath="$PROJECT_DIR$/.idea/FAANG.iml" />
