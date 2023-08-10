@@ -3,7 +3,9 @@ public class BuilderDesignPattern {
 
     public static void main (String[] args)
     {
-
+        User user1 = new User.UserBuilder()
+            .set("Fake address 1234")
+            .build();
     }
 }
 class User {
@@ -13,15 +15,20 @@ class User {
     private String address;
 
     User (UserBuilder userBuilder) {
-        this.name = userBuilder.
+        this.name = userBuilder.name;
+        this.id = userBuilder.id;
+        this.address = userBuilder.address;
     }
 
-    class UserBuilder {
+    public static class UserBuilder {
 
         private String name;
         private int id;
         private String address;
 
+        UserBuilder () {
+
+        }
         public void setName (String name)
         {
             this.name = name;
@@ -37,7 +44,9 @@ class User {
             this.address = address;
         }
 
-        public User
+        public User build() {
+            return new User(this);
+        }
     }
 }
 */
