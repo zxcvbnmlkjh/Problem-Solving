@@ -17,16 +17,13 @@ public class ClientMain
         Person person2 = new Person("xyz", 12);
 
         boolean equalsRes = employee.equals(employee1);
-        boolean objEqualRes = (employee == employee1);
+
 
         boolean personEquals = person1.equals(person2);
-        boolean personObjectEquals = (person1 == person2);
 
         System.out.println("Equals res is:" + equalsRes);
-        System.out.println("Object Equals res is:" + objEqualRes);
 
         System.out.println("Person Equals res is:" + personEquals);
-        System.out.println("Person Object Equals res is:" + personObjectEquals);
 
     }
 }

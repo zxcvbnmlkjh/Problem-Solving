@@ -10,5 +10,6 @@ public class StatisticMainAtomic
         }
         System.out.println("Minimum value is"+ statistics.minimum());
         System.out.println("Maximum value is"+ statistics.maximum());
+        System.out.println("Maximum value is"+ statistics.mean());
     }
 }

@@ -6,10 +6,14 @@ public class StatisticsImplUsingAtomic implements Statistic
 {
     AtomicInteger intMin = new AtomicInteger(Integer.MAX_VALUE);
     AtomicInteger intMax = new AtomicInteger(Integer.MIN_VALUE);
+    AtomicInteger sum = new AtomicInteger(0);
+    AtomicInteger count = new AtomicInteger(0);
 
     @Override
     public void event (int value)
     {
+        sum.getAndSet(sum.get() + value);
+        count.getAndIncrement();
         if(value<intMin.get()) {
             intMin.getAndSet(value);
         }
@@ -21,7 +25,9 @@ public class StatisticsImplUsingAtomic implements Statistic
 
     @Override public float mean ()
     {
-        return 0;
+        System.out.println("Value of sum is:"+ sum);
+        System.out.println("Value of count is:"+ count);
+        return sum.get()/count.get();
     }
 
     @Override public int minimum ()
