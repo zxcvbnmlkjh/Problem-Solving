@@ -13,30 +13,14 @@ import java.util.Objects;
 
 final public class Employee
 {
-    @Override public boolean equals (Object o)
-    {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Employee employee = (Employee) o;
-        return rollNo == employee.rollNo && Objects.equals(name, employee.name)
-            && Objects.equals(addressList, employee.addressList);
-    }
+    private final String name;
+    private final Integer rollNo;
+    private final Address address;
 
-    @Override public int hashCode ()
-    {
-        return Objects.hash(name, rollNo, addressList);
-    }
-
-    public String name;
-    private int rollNo;
-    private List<String> addressList;
-
-    Employee(String name, int rollNo, List addressList) {
+    Employee(String name, Integer rollNo, Address address) {
         this.name = name;
         this.rollNo = rollNo;
-        this.addressList = addressList;
+        this.address = address;
     }
 
     public String getName ()
@@ -44,13 +28,25 @@ final public class Employee
         return name;
     }
 
-    public int getRollNo ()
+    public Integer getRollNo ()
     {
         return rollNo;
     }
 
-    public List<String> getAddressList ()
+
+    public Address getAddress () throws CloneNotSupportedException
     {
-        return addressList;
+        return (Address) address.clone();
     }
+
+    @Override public String toString ()
+    {
+        return "Employee{" +
+            "name='" + name + '\'' +
+            ", rollNo=" + rollNo +
+            ", address=" + address +
+            '}';
+    }
+
+
 }

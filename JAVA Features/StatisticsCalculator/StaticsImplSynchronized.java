@@ -1,31 +1,42 @@
+/**
+ * This is the implementation class for Statistic
+ * I have used Object Level Locking and I have taken lock on StaticsImplSynchronized object.
+ */
 package StatisticsCalculator;
 
-public class StaticsImplSynchronized implements Statistic, Runnable
+import java.util.ArrayList;
+import java.util.List;
+
+public class StaticsImplSynchronized implements Statistic
 {
     private int min = Integer.MAX_VALUE;
     private int max = Integer.MIN_VALUE;
     private int sum = 0;
     private int count = 0;
+    private float mean = 0;
+    private float variance = 0;
+    List<Integer> integerList = new ArrayList<>();
 
-    @Override public synchronized void event (int value)   // Object level locking
+    @Override public void event (int value)
     {
-        sum = sum + value;
-        count ++;
-        if(value<min) {
-            min = value;
-        }
-
-        if(value>max) {
-            max = value;
+        // Object level locking
+        synchronized (this) {
+            integerList.add(value);
+            sum = sum + value;
+            count++;
+            if (value < min) {
+                min = value;
+            }
+            if (value > max) {
+                max = value;
+            }
         }
     }
 
-
     @Override public float mean ()
     {
-        System.out.println("Value of sum is:"+ sum);
-        System.out.println("Value of count is:"+ count);
-        return sum/count;
+        mean = sum/count;
+        return mean;
     }
 
     @Override public int minimum ()
@@ -40,13 +51,10 @@ public class StaticsImplSynchronized implements Statistic, Runnable
 
     @Override public float variance ()
     {
-        return 0;
-    }
-
-    @Override public void run ()
-    {
-        for(int i=1; i<= 100000; i++) {
-           event(i);
+        for (int i = 0; i < integerList.size(); i++) {
+            variance += Math.pow(integerList.get(i) - mean, 2);
         }
+        variance /= integerList.size();
+        return variance;
     }
 }

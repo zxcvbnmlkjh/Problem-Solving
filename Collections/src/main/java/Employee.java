@@ -47,6 +47,12 @@ public class Employee implements Comparable<Employee>
 
     @Override public int compareTo (Employee o)
     {
-        return this.name.compareTo(o.name);
+        int val = this.id - o.id;
+        if(val != 0) {
+            return val;
+        }
+        return  this.name.compareTo(o.name);
+        //return this.name.compareTo(o.name);
+        //return o.name.compareTo(this.name); // For Reverse
     }
 }

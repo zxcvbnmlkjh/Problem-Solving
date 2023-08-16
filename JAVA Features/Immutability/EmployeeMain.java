@@ -5,17 +5,19 @@ import java.util.List;
 
 public class EmployeeMain
 {
-    public static void main (String[] args)
+    public static void main (String[] args) throws CloneNotSupportedException
     {
-        List list = new ArrayList();
-        list.add("Abohar");
-        list.add("Delhi");
-        Employee e = new Employee("Priyanka", 123, list);
-        System.out.println(list);
-        list.add("Bangalore"); // This way actual list is getting modified which breaks the immutablity concept.
-        System.out.println("List after addition"+ list);
-        System.out.println("Name is:"+ e.name);
-        e.name = "Sneha";
-        System.out.println("Name is:"+ e.name);
+
+        String name = "Priyanka";
+        Integer num = 123;
+        Address add = new Address(1, "Abohar");
+        Employee employee = new Employee(name, num, add);
+
+        System.out.println("Employee obj before"+ employee);
+        Address add1 = employee.getAddress(); // this wont change as we are getting cloned object from get method
+        add1.name = "Delhi";
+        num = 222;
+        name = "Sneha";
+      System.out.println("Employee obj after"+ employee);
     }
 }

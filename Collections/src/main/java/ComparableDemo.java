@@ -19,14 +19,21 @@ public class ComparableDemo
         System.out.println("Sorted List"+ list);
 
         List<Employee> empList = new ArrayList<Employee>();
-        Employee emp1 = new Employee(1, "Sneha", "Delhi");
-        Employee emp2 = new Employee(2, "Priyanka", "Abohar");
-        Employee emp3 = new Employee(3, "Ankita", "Ghaziabad");
-        Employee emp4 = new Employee(4, "Aakshi", "Ghaziabad");
+        Employee emp1 = new Employee(13, "Sneha", "Delhi");
+        Employee emp2 = new Employee(43, "Priyanka", "Abohar");
+        Employee emp3 = new Employee(390, "Ankita", "Ghaziabad");
+        Employee emp4 = new Employee(43, "Aakshi", "Ghaziabad");
+        Employee emp5 = new Employee(17, "Naina", "Ghaziabad");
+        Employee emp6 = new Employee(17, "abc", "Ghaziabad");
+        Employee emp7 = new Employee(43, "xyz", "Ghaziabad");
         empList.add(emp1);
         empList.add(emp2);
         empList.add(emp3);
         empList.add(emp4);
+        empList.add(emp5);
+        empList.add(emp6);
+        empList.add(emp7);
+
         Collections.sort(empList);
         System.out.println("Sorted Employee List"+ empList);
 
