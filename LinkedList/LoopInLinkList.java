@@ -31,7 +31,7 @@ public class LoopInLinkList {
 
         Node node = new Node(data);
         temp.next = node;
-       node.next = head;
+        node.next = head;
     }
 
     public boolean checkLoop () {

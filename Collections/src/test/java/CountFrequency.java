@@ -29,7 +29,10 @@ public class CountFrequency
 
         // Second way to print
 
+        map.forEach((key, value) -> System.out.println(key + value));
+
         map.forEach((key, value) -> System.out.println("key is====  " + key + "  Value is  " + value));
+
 
         /*List<Map.Entry<Character, Integer>> list = new ArrayList<>(map.entrySet());
         list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));

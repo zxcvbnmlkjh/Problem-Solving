@@ -1,6 +1,8 @@
 /**
  * https://www.scaler.com/topics/iterative-inorder-traversal/
  *
+ * ** There are 2 main key things here one is currNode and other one is stack size not empty.
+ *
  * This is an easier approach using 2 while loops first to check currr is not null and stack not empty
  * Second while loop is to fill all left elements in the stack till the end.
  */

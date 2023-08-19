@@ -33,7 +33,7 @@ public class LargestSumSubArrayLength_Better
         for(int i=0; i< arr.length; i++)
         {
             cumSum = cumSum + arr[i];
-            int remSum = cumSum - K;
+            int remSum = cumSum - K; // -5 2 9 10
             if(cumSum == K) {
                 count = Math.max(count, i+1);
             }
@@ -41,7 +41,7 @@ public class LargestSumSubArrayLength_Better
 
                 count = Math.max(count , i - map.get(remSum));
             }
-            map.put(cumSum, i);
+            map.put(cumSum, i); // 10 15 17 24
         }
         return count;
     }

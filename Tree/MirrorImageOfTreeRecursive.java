@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MirrorImageOfTreeRecursive
 {
     public static void main (String[] args)
@@ -9,10 +12,10 @@ public class MirrorImageOfTreeRecursive
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        inOrder(root);
+        levelOrder(root);
         mirrorImage(root);
         System.out.println("After Mirror image");
-        inOrder(root);
+        levelOrder(root);
     }
     public static Node mirrorImage (Node root) {
         if(root == null) {
@@ -26,12 +29,19 @@ public class MirrorImageOfTreeRecursive
         return root;
     }
 
-    public static void inOrder (Node root)
-    {
-        if(root != null) {
-            inOrder(root.left);
-            System.out.print(root.data + " ");
-            inOrder(root.right);
+    public static void levelOrder (Node root) {
+        Queue queue = new LinkedList();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node tmp = (Node) queue.poll();
+            System.out.print(tmp.data + " ");
+            if(tmp.left != null) {
+                queue.offer(tmp.left);
+            }
+            if(tmp.right != null) {
+                queue.offer(tmp.right);
+            }
         }
     }
+
 }

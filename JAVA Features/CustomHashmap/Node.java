@@ -1,14 +1,15 @@
 package CustomHashmap;
 
-public class EntryObj<K,V>
+public class Node<K,V>
 {
     K key;
     V value;
-    EntryObj next;
-    EntryObj(K key, V value, EntryObj<K,V> next) {
+    public Node next;
+
+    Node(K key, V value, Node node) {
         this.key = key;
         this.value = value;
-        this.next = next;
+        this.next = node;
     }
 
     public K getKey ()
@@ -31,12 +32,12 @@ public class EntryObj<K,V>
         this.value = value;
     }
 
-    public EntryObj getNext ()
+    public Node getNext ()
     {
         return next;
     }
 
-    public void setNext (EntryObj next)
+    public void setNext (Node next)
     {
         this.next = next;
     }

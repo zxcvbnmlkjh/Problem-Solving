@@ -1,25 +1,25 @@
+/**
+ * We can implement Custom hashmap using an array of Node.
+ * Node will have key, value, next pointer.
+ *
+ */
 package CustomHashmap;
 
 public class HashmapOperations<K,V>
 {
-    Node[] entryArray;
+    int capacity;
+    Node[] entryArray ;
     Node entryObj;
-    int capacity = 10;
 
-    HashmapOperations () {
-        
+    HashmapOperations (int capacity) {
+        entryArray = new Node[capacity];
+        this.capacity = capacity;
     }
 
-    public void put(K key, V value) {
-
-        // find index
-        // if array index is empty create new entryobj and add it to index
-        // if not empty get entryobj at index and using equals if both are equal update the value
-
+    public void put(K key, String value) {
         int index = getIndex(key, capacity);
-
         if(entryArray[index] == null) {
-            entryObj = new Node<>(key, value, null);
+            entryObj = new Node(key, value, null);
             entryArray[index] = entryObj;
         }else {
             Node temp = entryArray[index];

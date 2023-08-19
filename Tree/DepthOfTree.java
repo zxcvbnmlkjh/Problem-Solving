@@ -10,6 +10,7 @@ public class DepthOfTree {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+        root.left.left.left = new Node(8);
         calculateDepth(root);
         System.out.println("Depth of tree is "+ calculateDepth(root));
     }
@@ -17,7 +18,7 @@ public class DepthOfTree {
     {
         Queue queue = new LinkedList();
         queue.offer(root);
-        queue.add(null);
+        queue.offer(null);
         int count =0;
         while (!queue.isEmpty()) {
             Node tmp = (Node) queue.poll();
