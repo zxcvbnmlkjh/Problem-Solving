@@ -1,7 +1,3 @@
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 public class CreateMaxHeap
 {
@@ -46,9 +42,5 @@ public class CreateMaxHeap
         CreateMaxHeap createMaxHeap = new CreateMaxHeap();
         createMaxHeap.createMaxHeap(arr);
         createMaxHeap.printArr(arr);
-
-        Map map = new HashMap<>();
-        Set set = map.entrySet();
-
     }
 }

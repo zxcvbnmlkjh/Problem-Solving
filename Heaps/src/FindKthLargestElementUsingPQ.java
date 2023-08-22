@@ -9,8 +9,7 @@ public class FindKthLargestElementUsingPQ
         for(int i : arr) {
             queue.add(i);
         }
-
-        while (j<=k) {
+        while (j<k) {
             queue.poll();
             j++;
         }
@@ -18,7 +17,7 @@ public class FindKthLargestElementUsingPQ
     }
 
     public static void main(String[] args) {
-        int arr[] = {-1, 2, 0, 6,7,3,2,90};
+        int arr[] = {-1, 22, 0, 6,7,3,2,90};
         FindKthLargestElementUsingPQ kthLargestElementUsingPQ = new FindKthLargestElementUsingPQ();
         kthLargestElementUsingPQ.findKthLargest(arr, 3);
     }
