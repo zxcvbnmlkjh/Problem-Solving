@@ -1,4 +1,4 @@
-/**
+package src; /**
  *
  * Logic behind this is we need to find Left Smaller and Right Smaller and then subtract rightSmaller-LeftSmaller-1 * height.
  *
