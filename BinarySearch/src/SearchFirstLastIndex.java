@@ -8,7 +8,7 @@ public class SearchFirstLastIndex
 {
     public static void main (String[] args)
     {
-        int[] nums = {5,7,7,8,8,10};
+        int[] nums = {5,6,7,7,7,8,8,8,10};
         int target = 8;
         SearchFirstLastIndex searchFirstLastIndex = new SearchFirstLastIndex();
         int[] res = searchFirstLastIndex.searchRange(nums, target);

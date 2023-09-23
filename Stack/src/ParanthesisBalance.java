@@ -53,6 +53,6 @@ public class ParanthesisBalance {
 {
     public static void main(String[] args) {
         ParanthesisBalance pb  = new ParanthesisBalance();
-        System.out.println(pb.isValid("[})("));
+        System.out.println(pb.isValid("[]"));
     }
 }

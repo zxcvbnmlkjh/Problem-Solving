@@ -16,6 +16,8 @@ public class FindMaxInBinaryTree
         if(root== null) {
             return Integer.MIN_VALUE;
         }
-        return Math.max(root.data, Math.max(findMax(root.left), findMax(root.right)));
+        int leftMax = findMax(root.left);
+        int rightMax = findMax(root.right);
+        return Math.max(root.data, Math.max(leftMax, rightMax));
     }
 }

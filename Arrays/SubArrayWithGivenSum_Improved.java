@@ -13,8 +13,8 @@ import java.util.Map;
 public class SubArrayWithGivenSum_Improved
 {
     public static void main(String[] args) {
-        int[] arr = {1,2,1,2,1};
-        int sum = 3;
+        int[] arr = {4,5,1,3,2,3,4};
+        int sum = 9;
         SubArrayWithGivenSum_Improved subArrayWithGivenSumImproved = new SubArrayWithGivenSum_Improved();
         subArrayWithGivenSumImproved.getIndex(arr, sum);
 

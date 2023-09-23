@@ -1,4 +1,9 @@
 /**
+ *
+ * Logic behind this is we need to find Left Smaller and Right Smaller and then subtract rightSmaller-LeftSmaller-1 * height.
+ *
+ * This formula rightSmaller-LeftSmaller-1  is to calculate width, we need to do height * width.
+ *
  * In this Problem to find largest rectangle
  *
  *
