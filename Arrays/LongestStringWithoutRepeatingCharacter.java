@@ -13,7 +13,7 @@ public class LongestStringWithoutRepeatingCharacter
 {
     public static void main (String[] args)
     {
-        System.out.println("Length iss:"+ lengthOfLongestSubstring("priyankatd"));
+        System.out.println("Length iss:"+ lengthOfLongestSubstring("depanashu"));
     }
         public static int lengthOfLongestSubstring(String A) {
             int i = 0;

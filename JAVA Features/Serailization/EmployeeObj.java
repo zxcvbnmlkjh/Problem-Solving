@@ -2,7 +2,6 @@ package Serailization;
 
 import Immutability.Employee;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class EmployeeObj implements Serializable

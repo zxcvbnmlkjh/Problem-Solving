@@ -1,3 +1,11 @@
+/**
+ * For Queues we need to add element in a circular order if Queue is empty from the begining.
+ *
+ * We need 3 things here front, rear, count
+ *
+ * we find the position of insertion using formula rear+1 % capacity, this will return the position.
+ *
+ */
 public class ArrayImplementationQueue
 {
     private int capacity;

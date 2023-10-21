@@ -39,6 +39,4 @@ public class LevelOrderTraversalRecursive
             printCurrentLevel(root.right, level - 1);
         }
     }
-
-
 }

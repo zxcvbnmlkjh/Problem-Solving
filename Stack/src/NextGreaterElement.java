@@ -1,11 +1,9 @@
 import java.util.Stack;
 
-public class NextGreaterElement
-{
-
+public class NextGreaterElement {
     public static void main(String[] args)
     {
-        int[] arr = {1,3,4,2};   //{3,4,-1,-1}
+        int[] arr = {1,3,4,2};
         NextGreaterElement ng = new NextGreaterElement();
         int[] result = ng.getArray(arr);
 
@@ -15,7 +13,6 @@ public class NextGreaterElement
             j++;
         }
     }
-
     public int[] getArray (int[] arr)
     {
         int[] result = new int[arr.length];
@@ -36,5 +33,4 @@ public class NextGreaterElement
             stack.push(arr[i]);
         }
         return result;
-    }
-}
+    } }

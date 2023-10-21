@@ -23,8 +23,10 @@ public class JAVA8
 
         map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
 
-        map.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByKey().reversed()).forEach(System.out::println);
 
+       /* map.entrySet().stream().sorted(
+            (Comparator<? super Map.Entry<String, Integer>>) Map.Entry.comparingByKey().reversed()).forEach(System.out::println);
+*/
         HashMap<String, Employee> hashMapObj = new HashMap<>();
         hashMapObj.put("a", new Employee(1, "Priyanka", "Abohar"));
         hashMapObj.put("b", new Employee(2, "Sneha", "Delhi"));
@@ -59,7 +61,5 @@ public class JAVA8
             .collect(Collectors.toMap(Map.Entry :: getKey, Map.Entry :: getValue, (e1,e2) -> e1, LinkedHashMap::new));
 
         System.out.println(sortedByObj);
-
-
     }
 }

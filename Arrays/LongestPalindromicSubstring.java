@@ -14,7 +14,7 @@ public class LongestPalindromicSubstring
 {
     public static void main (String[] args)
     {
-        System.out.println("Length of longest string is:" + longestPalindrome("graamadamsldld"));
+        System.out.println("Length of longest string is:" + longestPalindrome("babad"));
     }
     public static String longestPalindrome(String A) {
             int ans = 0;
@@ -50,7 +50,7 @@ public class LongestPalindromicSubstring
             return ansString.toString();
         }
 
-        public static int expands(String A, int p1, int p2){
+        public static int expands(String A, int p1, int p2) {
             int ans = 0;
             while(p1 >= 0 && p2 <= A.length()-1 && A.charAt(p1) == A.charAt(p2)){
                 ans = p2-p1+1;

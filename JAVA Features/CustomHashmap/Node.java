@@ -1,5 +1,7 @@
 package CustomHashmap;
 
+import java.util.Objects;
+
 public class Node<K,V>
 {
     K key;
@@ -41,4 +43,5 @@ public class Node<K,V>
     {
         this.next = next;
     }
+
 }

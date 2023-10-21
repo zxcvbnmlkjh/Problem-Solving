@@ -15,11 +15,10 @@ import java.util.Stack;
 public class LargestRect_Histogram
 {
     public static void main(String[] args) {
-        int[] arr = {3,5,1,7,5,9};
+        int[] arr = {6, 2, 5, 4, 5, 1, 6};
         LargestRect_Histogram rect = new LargestRect_Histogram();
         System.out.println("Area is "+ rect.getLargestRectangle(arr));
     }
-
     public int getLargestRectangle(int[] arr)
     {
         int[] nse = getNextSmallestElement(arr);
@@ -35,7 +34,6 @@ public class LargestRect_Histogram
         }
         return maxArea;
     }
-
     public int[] getNextSmallestElement(int[] arr) {
         int[] res = new int[arr.length];
         Stack<Integer> stack = new Stack<>();

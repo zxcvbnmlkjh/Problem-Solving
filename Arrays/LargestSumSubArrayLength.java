@@ -1,3 +1,6 @@
+/**
+ * get the count of subArrays which are giving a sum of 15.
+ */
 public class LargestSumSubArrayLength
 {
     public static void main (String[] args)

@@ -18,7 +18,7 @@ public class CheckSubstringPalindrome
         System.out.println(check.checkPalindrome(str.toCharArray(), 1,7));
 
     }
-    public boolean checkPalindrome(char[] ch, int start, int end) {
+/*    public boolean checkPalindrome(char[] ch, int start, int end) {
 
         // This will be true because when start is greater than end that means we dont
         // have any substring or substrin is empty , so empty string is alway palindrome
@@ -30,5 +30,16 @@ public class CheckSubstringPalindrome
             return true;
         }
         return false;
+    }*/
+
+    public boolean checkPalindrome (char[] ch, int start, int end) {
+
+        if(start>end) {
+            return true;
+        }
+        if(ch[start] != ch[end]) {
+            return false;
+        }
+        return checkPalindrome(ch, start+1, end-1);
     }
 }

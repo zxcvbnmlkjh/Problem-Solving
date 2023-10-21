@@ -11,6 +11,7 @@ public class ReverseListUsingK {
         NodeList node6 = new NodeList (6, null);
         NodeList node7 = new NodeList (7, null);
         NodeList node8 = new NodeList (8, null);
+        NodeList node9 = new NodeList (9, null);
         node1.next = node2;
         node2.next = node3;
         node3.next = node4;
@@ -18,13 +19,14 @@ public class ReverseListUsingK {
         node5.next = node6;
         node6.next = node7;
         node7.next = node8;
+        node8.next = node9;
 
         ReverseListUsingK solution = new ReverseListUsingK();
-
         int len = solution.calculateLength(node1);
         solution.printList(node1);
-        System.out.println(len);
-        solution.reverseList(len, 3, node1);
+        NodeList res = solution.reverseList(len, 3, node1);
+        System.out.println("Print after Reverse");
+        solution.printList(res);
     }
 
     public int calculateLength (NodeList head) {
@@ -43,38 +45,31 @@ public class ReverseListUsingK {
             System.out.println(head.data);
             head = head.next;
         }
-
     }
 
-    public void reverseList (int length, int k, NodeList head) {
-
+    public NodeList reverseList (int length, int k, NodeList head) {
         int limit = length/k;
         int count = 0;
-        NodeList temp = head;
+        NodeList curr = head;
         NodeList prev = null;
-        NodeList lastPtr = temp;
-        NodeList nextRef = null;
-        NodeList newNode = null;
+        NodeList next = null;
         int i=0;
-        while (count < limit && temp.next != null) {
-            lastPtr.next = nextRef;
+        NodeList finalRes;
+        while (count < limit && curr.next != null) {
             i = 0;
-            while (i < k) {  // 0. 1 2
-                System.out.println(temp.data);
-                System.out.println(temp.next);
-                newNode = temp;  // 1. // 2
-                newNode.next = prev;   //      2 --> prev == 1--> null
-                prev = newNode;   // 2 --> 1 -->.    3 --->   2 --> 1
-                temp = temp.next;  // 2 // 3
+           // prev = null;
+            while (i < k) {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
                 i++;
             }
-            count++;  // 1
-            nextRef = prev;
+            count++;
+            //head.next = curr;
+            //head = curr;
         }
-
-        if(temp != null) {
-            prev.next = temp;
-        }
+        return prev;
     }
 }
 class NodeList {

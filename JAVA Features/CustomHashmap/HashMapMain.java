@@ -9,6 +9,8 @@ public class HashMapMain
         hashmapOperations.put(2, "Sneha");
         hashmapOperations.put(3, "Ankita");
         hashmapOperations.put(1, "Taneja");
-        System.out.println(hashmapOperations.get(1));
+        hashmapOperations.put(11, "ssssss");
+        System.out.println(hashmapOperations.get(11));
+        System.out.println(hashmapOperations.get(4));
     }
 }

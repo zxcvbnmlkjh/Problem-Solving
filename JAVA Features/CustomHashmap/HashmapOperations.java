@@ -35,7 +35,8 @@ public class HashmapOperations<K,V>
                 temp = temp.next;
             }
             if(!added) {
-                end.next = temp;
+                entryObj = new Node(key, value, null);
+                end.next = entryObj;
             }
         }
     }
@@ -51,6 +52,7 @@ public class HashmapOperations<K,V>
                 if(entry.getKey() == key) {
                     return (V) entry.getValue();
                 }
+                entry = entry.next;
             }
             return null;
         }

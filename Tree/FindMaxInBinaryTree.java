@@ -18,6 +18,8 @@ public class FindMaxInBinaryTree
         }
         int leftMax = findMax(root.left);
         int rightMax = findMax(root.right);
+        System.out.println("Left max is ====" + leftMax);
+        System.out.println("Right max is ----"+ rightMax);
         return Math.max(root.data, Math.max(leftMax, rightMax));
     }
 }
