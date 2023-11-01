@@ -1,5 +1,7 @@
 package LRUCache;
 
+import org.w3c.dom.Node;
+
 import java.util.HashMap;
 
 public class LRUCacheOperations<K,V>
@@ -21,37 +23,47 @@ public class LRUCacheOperations<K,V>
 
     public void put (K key, V value)
     {
+        System.out.println("M in put method and thread name is:" + Thread.currentThread().getName());
         LRUNode node = lruMap.get(key);
-        if(node == null) {
-            if(lruMap.size() <3) {
-                LRUNode newNode = new LRUNode(key, value);
-                addFront(newNode);
-                lruMap.put(key, newNode);
-            } else {
-                LRUNode newNode = new LRUNode(key, value);
-                removeTail(tail.prev);
-                addFront(newNode);
-                lruMap.remove(tail.prev.getKey());
-                lruMap.put(key, newNode);
+        System.out.println("Node obj:" + node);
+            if (node == null) {
+                if (lruMap.size() < 3) {
+                    LRUNode newNode = new LRUNode(key, value);
+                    addFront(newNode);
+                    lruMap.put(key, newNode);
+                }
+                else {
+                        LRUNode newNode = new LRUNode(key, value);
+                        removeTail(tail.prev);
+                        addFront(newNode);
+                        lruMap.remove(tail.prev.getKey());
+                        lruMap.put(key, newNode);
+                }
             }
-        } else {
-            node.setValue(value);
-            removeTail(node);
-            addFront(node);
-        }
-
+            else {
+                synchronized (node) {
+                    node.setValue(value);
+                    removeTail(node);
+                    addFront(node);
+                }
+            }
     }
 
     public V get (K key)
     {
         LRUNode node = lruMap.get(key);
-        if (node == null) {
-             return null;
-            } else {
+        System.out.println("Node obj:" + node);
+        synchronized (node) {
+            System.out.println("M in get method and thread name is:" + Thread.currentThread().getName());
+            if (node == null) {
+                return null;
+            }
+            else {
                 removeTail(node);
                 addFront(node);
             }
-        return (V) node.getValue();
+            return (V) node.getValue();
+        }
     }
 
     public void removeTail (LRUNode node) {

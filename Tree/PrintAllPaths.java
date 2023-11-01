@@ -1,3 +1,8 @@
+/**
+ * We are doing Depth first search and adding all the traversed elements to the Array and when it is leaf element
+ * We called the printArray element and return.
+ *
+ */
 public class PrintAllPaths
 {
     public static void main (String[] args)

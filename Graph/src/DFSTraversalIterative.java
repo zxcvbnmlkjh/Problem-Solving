@@ -23,7 +23,7 @@ public class DFSTraversalIterative
         traversal.addEdge(list, 3, 4);
         traversal.addEdge(list, 2, 3);
         traversal.addEdge(list, 4, 1);
-        traversal.traverse(list, 2);
+        traversal.traverse(list, 1);
     }
 
     void addEdge(List<List<Integer>> list, int i, int j) {
@@ -37,15 +37,17 @@ public class DFSTraversalIterative
         Stack<Integer> stack = new Stack();
         stack.push(i);
         visited[i] = true;
+        while(!stack.isEmpty()) {
             int elem = stack.pop();
-            System.out.println(elem + " ");
+            System.out.print(elem + " ");
             List<Integer> elemList = list.get(elem);
-            for(int item : elemList) {
-                if(!visited[item]){
+            for (int item : elemList) {
+                if (!visited[item]) {
                     stack.push(item);
                     visited[item] = true;
                 }
             }
+        }
         }
 
     }

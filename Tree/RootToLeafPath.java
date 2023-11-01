@@ -1,3 +1,12 @@
+/**
+ * Extension of Problem Find element in binary tree
+ *
+ * If we find out the element we send the response as true and we send true till the root node and store the values in list
+ * Return the list at the end which will return entire path.
+ *
+ * https://github.com/zxcvbnmlkjh/Problem-Solving/blob/main/Tree/CheckElementInTree.java
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +44,5 @@ public class RootToLeafPath
         } else {
             return false;
         }
-        //return leftCheck || rightCheck;
     }
 }

@@ -18,7 +18,7 @@ public class FindAllPaths
             if(start == end){
                 finalList.add(resultList);
                 System.out.print("final list:"+ finalList + " ");
-                System.out.print("Resultlist"+ resultList + " ");
+                //System.out.print("Resultlist"+ resultList + " ");
                 return;
             }
             List<Integer> list = map.get(start);

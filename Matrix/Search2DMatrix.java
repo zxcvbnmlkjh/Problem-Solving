@@ -1,3 +1,7 @@
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.TreeSet;
+
 /**
  * https://leetcode.com/problems/search-a-2d-matrix/
  *
@@ -26,7 +30,7 @@ public class Search2DMatrix
         int end = rowCount*colCount-1;
         while(start<=end) {
 
-            int mid = (start+end)/2;
+            int mid = (start+end)/2; // 5
             if(matrix[mid/colCount][mid%colCount] == target) {
                 return true;
             }

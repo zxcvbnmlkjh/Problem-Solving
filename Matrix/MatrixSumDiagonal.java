@@ -1,3 +1,11 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * We need to have 2 separate loops one for calculating left diagonal
+ * One for calculating the right diagonal.
+ */
 public class MatrixSumDiagonal
 {
     public static void main(String[] args) {

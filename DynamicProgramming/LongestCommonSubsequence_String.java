@@ -1,3 +1,4 @@
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,8 @@ public class LongestCommonSubsequence_String
         System.out.println("Longest sequence is " +
             longestCommonSubsequence_string.longestCommonSubsequence(str1.length(),
             str2.length(), str1.toCharArray(), str2.toCharArray()));
+
+        PriorityQueue p = new PriorityQueue<>();
     }
 
     public int longestCommonSubsequence(int m, int n, char[] ch1, char[] ch2) {

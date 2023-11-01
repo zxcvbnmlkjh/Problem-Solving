@@ -2,7 +2,9 @@ import java.util.*;
 
 /**
  * This will check if path exists between source and destination
+ *
  * Find Path if exists - we run breadth first search putting element in queue
+ *
  * At the end if the visitedArray has that position as untouched that means
  * There is no path otherwise path exists.
  *
@@ -24,7 +26,7 @@ public class FindIfPathExistsInGraph
         findIfPath.addEdge(map, 5, 4);
         findIfPath.addEdge(map, 4 ,3);
         boolean[] visited = new boolean[map.size()];
-        System.out.print("Path Exists: " + findIfPath.findIfPathExists(map, 0, 5, visited));
+        System.out.print("Path Exists: " + findIfPath.findIfPathExists(map, 0, 2, visited));
     }
 
     void addEdge (Map<Integer, List<Integer>> map, int i , int j) {

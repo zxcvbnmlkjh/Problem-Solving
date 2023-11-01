@@ -1,11 +1,15 @@
 /**
  * https://www.youtube.com/watch?v=UDbdB5zfJ6E
+ *
+ * https://leetcode.com/problems/find-the-town-judge/description/
+ *
  * To check this we need to keep track of outdegree and indegree
  * outdegree is like how many nodes going out from a node
  * indegree is like how many nodes coming to that node
  * So in this in a map we will maintain a count for eg - [1,2]
  * for 1 we will decrement is counter and for 2 we increment the counter
  * so for any number if it just has indegree then the count should be n-1
+ * outdegree would be zero as no dependency on others.
  *
  */
 
@@ -22,7 +26,9 @@ public class FindTownJudge
         for (int i = 1; i <= n; i++) {
             map.put(i, 0);
         }
-        findTownJudge.addEdge(map, 1, 2);
+        findTownJudge.addEdge(map, 1, 3);
+        findTownJudge.addEdge(map, 2, 3);
+        findTownJudge.addEdge(map, 3, 1);
         System.out.println("Judge is " + findTownJudge.find(n, map));
     }
     public int find( int n, Map<Integer, Integer> map) {
@@ -32,7 +38,8 @@ public class FindTownJudge
            }
         }
         return -1;
-    }
+        }
+
     void addEdge (Map<Integer, Integer> map, int i , int j) {
         map.put(i, map.get(i)-1);
         map.put(j, map.get(j)+1);

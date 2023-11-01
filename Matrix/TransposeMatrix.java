@@ -1,5 +1,10 @@
 /**
  * Transpose is changing row to column
+ * We start i from 0 location and j from i+1.
+ *
+ * so for i = 0 we are just processing from 1st element  till end of row.
+ * for i=1 j= 2 we are processing from 2nd element till end of row.
+ *
  */
 public class TransposeMatrix
 {
