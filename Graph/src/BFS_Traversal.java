@@ -1,6 +1,8 @@
 /**
  * BFS Travel is kind of level order traversal in tree. We traverse all the nodes level by level using queue.
  * Addn DS used are Queue,Visited Array, List<List<Integer>> for adj list representation
+ *
+ * https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
  */
 
 import java.util.ArrayList;

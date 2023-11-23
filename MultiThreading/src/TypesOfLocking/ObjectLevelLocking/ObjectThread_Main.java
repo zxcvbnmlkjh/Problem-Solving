@@ -7,6 +7,7 @@ public class ObjectThread_Main
         ObjectThread_Main obj = new ObjectThread_Main();
         ObjectThread_Main obj1 = new ObjectThread_Main();
 
+        // these 2 threads r working on same objects
         ThreadClass1 threadClass1 = new ThreadClass1(obj);
         ThreadClass1 threadClass2 = new ThreadClass1(obj);
 
@@ -15,8 +16,10 @@ public class ObjectThread_Main
 
         Thread t1 = new Thread(threadClass1);
         Thread t2 = new Thread(threadClass2);
+
+        // t3 thread will interfere in t1 and t2.
+
         Thread t3 = new Thread(threadClass3);
-        // If we create another thread using different object this thread will interfere in t1 and t2.
 
         t1.start();
         t2.start();

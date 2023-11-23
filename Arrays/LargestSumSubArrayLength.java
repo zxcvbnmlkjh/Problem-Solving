@@ -13,20 +13,20 @@ public class LargestSumSubArrayLength
     }
 
     public int findCount(int[] arr, int K) {
-        int maxCount = Integer.MIN_VALUE;
+        int maxLen = Integer.MIN_VALUE;
         for(int i=0; i< arr.length; i++) {
             int sum =0;
             int j= i;
-            int count=0;
+            int len=0;
             while(sum < K && j<arr.length) {
                 sum = sum + arr[j];
-                count++;
+                len++;
                 j++;
             }
             if(sum == K) {
-                maxCount = Math.max(maxCount, count);
+                maxLen = Math.max(maxLen, len);
             }
         }
-        return maxCount;
+        return maxLen;
     }
 }

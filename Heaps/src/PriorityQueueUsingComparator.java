@@ -21,7 +21,7 @@ public class PriorityQueueUsingComparator
         System.out.println(pq.peek());
 
         PriorityQueue<Employee> pq1 = new PriorityQueue<>();
-        Employee emp1 = new Employee(1, "Priyanka");
+        Employee emp1 = new Employee(1, "Ariyanka");
         Employee emp2 = new Employee(2, "Sneha");
         Employee emp3 = new Employee(3, "Naina");
         Employee emp4 = new Employee(4, "Priyanka");

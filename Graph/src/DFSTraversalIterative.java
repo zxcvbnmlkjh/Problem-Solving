@@ -4,6 +4,8 @@
  * whatever elem is not visited put that in stack and pop until stack is empty.
  *
  * Addn DS stack , visited Array
+ *
+ * https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
  */
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ public class DFSTraversalIterative
         traversal.addEdge(list, 3, 4);
         traversal.addEdge(list, 2, 3);
         traversal.addEdge(list, 4, 1);
-        traversal.traverse(list, 1);
+        traversal.traverse(list, 2);
     }
 
     void addEdge(List<List<Integer>> list, int i, int j) {

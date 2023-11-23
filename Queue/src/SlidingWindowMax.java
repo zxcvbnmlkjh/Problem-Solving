@@ -9,6 +9,9 @@
     Better Approach - Using Priority Queue Heaps for size K create a heap of size and return the top element from the heap.
     Optimized Approach - Using a Dequeue we can solve this problem, if u have left element or element in dequeue smaller
 
+    For Deque if left element is smaller than the current element remove the prev element from queue otherwise add to queue
+    and if size of queue exceeds the window size remove the first element from the queue.
+
  */
 
 import java.util.ArrayDeque;

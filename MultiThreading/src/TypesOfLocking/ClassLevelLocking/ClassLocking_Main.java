@@ -8,13 +8,17 @@ public class ClassLocking_Main
         Mythread2 mythread2 = new Mythread2();
         Thread thread1 = new Thread(myThread1);
         Thread thread2 = new Thread(mythread2);
+        Thread thread3 = new Thread(myThread1);
         thread1.start();
         thread2.start();
+        thread3.start();
     }
 
     // This is class Level locking when you are using synchronized with static method
     // In this scenario all the threads will be blocked only one thread will work at a time.
-    public synchronized static void test () {
+    public synchronized static void test () throws InterruptedException
+    {
+        Thread.sleep(5000);
         for(int i=0; i< 100; i++) {
             System.out.println("Thread name is:"+ Thread.currentThread().getName() + "  M in test");
         }

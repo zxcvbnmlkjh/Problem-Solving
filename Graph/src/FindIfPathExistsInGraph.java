@@ -26,7 +26,7 @@ public class FindIfPathExistsInGraph
         findIfPath.addEdge(map, 5, 4);
         findIfPath.addEdge(map, 4 ,3);
         boolean[] visited = new boolean[map.size()];
-        System.out.print("Path Exists: " + findIfPath.findIfPathExists(map, 0, 2, visited));
+        System.out.print("Path Exists: " + findIfPath.findIfPathExists(map, 0, 4, visited));
     }
 
     void addEdge (Map<Integer, List<Integer>> map, int i , int j) {

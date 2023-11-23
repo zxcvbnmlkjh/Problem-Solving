@@ -5,10 +5,9 @@ import java.util.concurrent.locks.Lock;
 public class AdderUsingSynchronized implements Runnable
 {
     CounterVal_Sync counterVal;
-    Lock lock;
-    AdderUsingSynchronized(CounterVal_Sync counterVal, Lock lock) {
+
+    AdderUsingSynchronized(CounterVal_Sync counterVal) {
         this.counterVal = counterVal;
-        this.lock = lock;
     }
 
     @Override public void run ()

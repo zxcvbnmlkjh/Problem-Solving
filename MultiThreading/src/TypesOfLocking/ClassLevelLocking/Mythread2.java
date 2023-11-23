@@ -6,6 +6,11 @@ public class Mythread2 implements Runnable
 
     @Override public void run ()
     {
-        classLocking_main.test1();
+        try {
+            classLocking_main.test();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -19,7 +19,7 @@ public class LCATree
         root.right.right.left = new Node(6);
         root.right.right.right = new Node(7);
         LCATree lcaTree = new LCATree();
-        Node res = lcaTree.findLca(root, 8, 4);
+        Node res = lcaTree.findLca(root, 8, 6);
         System.out.println(res.data);
     }
 

@@ -21,7 +21,7 @@ public class ClientSynchronizedMain
     {
         CounterVal_Sync counterVal = new CounterVal_Sync();
         Lock lock = new ReentrantLock();
-        AdderUsingSynchronized adder = new AdderUsingSynchronized(counterVal, lock);
+        AdderUsingSynchronized adder = new AdderUsingSynchronized(counterVal);
         SubtractorUsingSynchronized subtractor = new SubtractorUsingSynchronized(counterVal, lock);
 
         Thread t1 = new Thread(adder);

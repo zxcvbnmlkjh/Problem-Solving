@@ -17,6 +17,7 @@ public class LargestSumSubArraysCount
         //int[] arr = {10, 5, 2, 7, 1, 15};
         //int k = 15;
         int[] arr = {10, 15, -5, 15, -10, 5};
+        // -10 -5 5 10 15 15
         int k = 20;
         LargestSumSubArraysCount largestSumSubArraysCount = new LargestSumSubArraysCount();
         System.out.println("No of Arrays is "+ largestSumSubArraysCount.subarraySum(arr, 20));

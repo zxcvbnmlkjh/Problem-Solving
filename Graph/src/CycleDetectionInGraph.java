@@ -24,9 +24,9 @@ public class CycleDetectionInGraph {
         cycleDetectionInGraph.addEdge(list, 1, 2);
         cycleDetectionInGraph.addEdge(list, 2, 3);
         cycleDetectionInGraph.addEdge(list, 3, 4);
-        cycleDetectionInGraph.addEdge(list, 0, 4);
-        cycleDetectionInGraph.addEdge(list, 4, 1);
-        cycleDetectionInGraph.addEdge(list, 1, 3);
+        //cycleDetectionInGraph.addEdge(list, 0, 4);
+        //cycleDetectionInGraph.addEdge(list, 4, 1);
+        //cycleDetectionInGraph.addEdge(list, 1, 3);
         boolean[] visited = new boolean[list.size()];
         Arrays.fill(visited, false);
         System.out.println("Cycle exists " + cycleDetectionInGraph.findCycle(list, 0, visited));
@@ -53,7 +53,7 @@ public class CycleDetectionInGraph {
             for(int val : nodeList) {
 
                 if(!visited[val]) {
-                    visited[val] = false;
+                    visited[val] = true;
                     parentMap.put(val, elem);
                     queue.add(val);
                 } else if (parentMap.get(elem) != val) {

@@ -30,7 +30,7 @@ public class Search2DMatrix
         int end = rowCount*colCount-1;
         while(start<=end) {
 
-            int mid = (start+end)/2; // 5
+            int mid = (start+end)/2; // 5/4 1 1
             if(matrix[mid/colCount][mid%colCount] == target) {
                 return true;
             }

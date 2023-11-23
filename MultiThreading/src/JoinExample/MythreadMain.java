@@ -1,3 +1,10 @@
+package JoinExample;
+
+import JoinExample.MyThread;
+
+/**
+ * Example of Join Method where t1.join means main thread will be paused until t1 completes.
+ */
 public class MythreadMain
 {
     public static void main (String[] args) throws InterruptedException

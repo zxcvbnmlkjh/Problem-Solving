@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class LongestNonRepeatingString
 {
 
@@ -7,6 +10,11 @@ public class LongestNonRepeatingString
 
         // Result
         int res = 0;
+
+        Set<Character> set = new HashSet<>();
+        set.add('a');
+
+        set.clear();
 
         for(int i = 0; i < n; i++)
         {

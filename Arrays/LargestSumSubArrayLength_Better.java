@@ -6,10 +6,18 @@
  *  * For Eg - {10+5+2+7+1} = 25, 25-15 will be 10 so if we have 10 in our map
  *  to find the length of the array we will subtract map.get(10) and current i value.
  *  10 key has value as 0 and 25 key has key as 4.
- *  *
+ *
  *  One more variation of this questions is
  * Largest subarray with equal number of 0s and 1s
  * https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/
+ *
+ *
+ * // Best Solution is with Sliding Window
+ *
+ * https://leetcode.com/problems/subarray-sum-equals-k/description/
+ *
+ * https://www.youtube.com/watch?v=TfQPoaRDeMQ
+ *
  */
 
 import java.util.HashMap;

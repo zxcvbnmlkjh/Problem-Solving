@@ -6,6 +6,11 @@ public class MyThread1 implements Runnable
 
     @Override public void run ()
     {
-        classLocking_main.test();
+        try {
+            classLocking_main.test();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

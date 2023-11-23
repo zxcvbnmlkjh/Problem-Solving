@@ -4,7 +4,6 @@
 package FunctionalInterface;
 
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class JAVA8_InterviewQues

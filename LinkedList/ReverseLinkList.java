@@ -70,4 +70,12 @@ class ListNodee
     {
         this.next = next;
     }
+
+    @Override public String toString ()
+    {
+        return "ListNodee{" +
+            "data=" + data +
+            ", next=" + next +
+            '}';
+    }
 }

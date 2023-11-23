@@ -13,6 +13,7 @@ public class MaxSumSubArray_Kadanes
         for(int i=0 ;i<nums.length;i++) {
 
             sum = sum + nums[i];
+
             if(sum> maxSum) {
                 maxSum = sum;
             }
@@ -24,7 +25,7 @@ public class MaxSumSubArray_Kadanes
         return maxSum;
     }
     public static void main(String[] args) {
-        int[] arr = {0,3,2,-4,1};
+        int[] arr = {-1,-2};
         MaxSumSubArray_Kadanes maxSumSubArray_kadanes = new MaxSumSubArray_Kadanes();
         System.out.println("Result Array is: "+ maxSumSubArray_kadanes.getMaxSum(arr));
     }

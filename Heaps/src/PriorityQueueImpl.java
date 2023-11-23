@@ -12,7 +12,7 @@ public class PriorityQueueImpl
 {
     public static void main (String[] args)
     {
-        PriorityQueue priorityQueue = new PriorityQueue(Collections.reverseOrder());
+        PriorityQueue priorityQueue = new PriorityQueue(Collections.reverseOrder()); // Max Heap
         priorityQueue.add(23);
         priorityQueue.add(33);
         priorityQueue.add(3);
@@ -23,7 +23,7 @@ public class PriorityQueueImpl
 
         // 3rd largest
         int i =1;
-        while(i < 2) {
+        while(i < 3) {
             priorityQueue.poll();
             i++;
         }

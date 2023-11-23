@@ -10,7 +10,7 @@ public class CheckElementInTree
         root.right.left.left = new Node(8);
         root.right.right.left = new Node(6);
         CheckElementInTree checkElementInTree = new CheckElementInTree();
-        System.out.println("Exists:" + checkElementInTree.checkIfExists(root, 18));
+        System.out.println("Exists:" + checkElementInTree.checkIfExists(root, 8));
     }
 
     public boolean checkIfExists (Node root, int k) {

@@ -6,8 +6,8 @@
 public class MedianOfSortedArray
 {
     public static void main(String[] args) {
-        int[] nums1 = {1,2};
-        int[] nums2 = {3,4};
+        int[] nums1 = {1,3};
+        int[] nums2 = {4};
         MedianOfSortedArray median = new MedianOfSortedArray();
         System.out.print(median.findMedianSortedArrays(nums1, nums2));
     }

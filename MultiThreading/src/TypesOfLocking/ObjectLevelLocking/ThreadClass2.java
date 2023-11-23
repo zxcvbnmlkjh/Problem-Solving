@@ -1,5 +1,7 @@
 package TypesOfLocking.ObjectLevelLocking;
 
+import java.util.concurrent.Callable;
+
 public class ThreadClass2 implements Runnable
 {
     ObjectThread_Main objectThread_main;

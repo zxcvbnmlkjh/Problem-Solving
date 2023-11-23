@@ -28,7 +28,7 @@ public class FindTownJudge
         }
         findTownJudge.addEdge(map, 1, 3);
         findTownJudge.addEdge(map, 2, 3);
-        findTownJudge.addEdge(map, 3, 1);
+        //findTownJudge.addEdge(map, 3, 1);
         System.out.println("Judge is " + findTownJudge.find(n, map));
     }
     public int find( int n, Map<Integer, Integer> map) {

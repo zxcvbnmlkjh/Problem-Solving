@@ -15,11 +15,11 @@ public class IsValidBST
 {
     public static void main (String[] args)
     {
-        Node root = new Node(5);
-        root.left = new Node(4);
-        root.right = new Node(6);
-        root.right.left = new Node(3);
-        root.right.right = new Node(7);
+        Node root = new Node(8);
+        root.left = new Node(3);
+        root.right = new Node(10);
+        root.right.left = new Node(9);
+        root.right.right = new Node(12);
         IsValidBST validBST = new IsValidBST();
         System.out.println(validBST.isValidBST(root));
     }

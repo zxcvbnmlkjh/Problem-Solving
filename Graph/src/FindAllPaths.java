@@ -1,3 +1,9 @@
+/**
+ * https://www.geeksforgeeks.org/find-paths-given-source-destination/
+ *
+ * Used DFS to find all paths from source to destination
+ */
+
 import java.util.*;
 
 public class FindAllPaths
@@ -22,10 +28,10 @@ public class FindAllPaths
                 return;
             }
             List<Integer> list = map.get(start);
-            for(int i=0;i<list.size();i++) {
-                resultList.add(list.get(i));
-                dfs(map, list.get(i), end, resultList, finalList);
-                resultList.remove(list.get(i));
+            for(Integer i : list) {
+                resultList.add(i);   // 1
+                dfs(map, i, end, resultList, finalList);
+                resultList.remove(i);
             }
     }
 }
