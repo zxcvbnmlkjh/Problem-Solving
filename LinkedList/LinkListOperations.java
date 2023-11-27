@@ -3,6 +3,7 @@ public class LinkListOperations {
      Node temp;
      int count;
      Node headNew;
+
      class Node {
         int data;
         Node next;

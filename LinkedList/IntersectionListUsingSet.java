@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class IntersectionList
+public class IntersectionListUsingSet
 {
     public static void main (String[] args)
     {
@@ -36,7 +36,7 @@ public class IntersectionList
         node11.setNext(node12);
         node11.setNext(node6);
 
-        IntersectionList intersectionList = new IntersectionList();
+        IntersectionListUsingSet intersectionList = new IntersectionListUsingSet();
         ListNodee node = intersectionList.getIntersectionPoint(node1, node8);
         System.out.println("Interection node is " + node.data);
     }

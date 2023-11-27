@@ -1,3 +1,7 @@
+/**
+ * Using 2 ptr slow and fast ptr. slowptr move by 1 and fastptr move by 2 and the point
+ * where fastptr reaches to end slow ptr would be at mid
+ */
 public class FindMid
 {
     FindMid.Node head;
