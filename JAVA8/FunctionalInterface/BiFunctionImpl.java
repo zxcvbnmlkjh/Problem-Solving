@@ -1,3 +1,9 @@
+/**
+ * BiFunction is a functional interface, which accepts two arguments and returns a result. The interface contains two methods:
+ *
+ * The apply() method
+ * The andThen() method
+ */
 package FunctionalInterface;
 
 import java.util.function.BiFunction;

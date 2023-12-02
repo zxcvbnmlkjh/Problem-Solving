@@ -11,11 +11,6 @@ public class LongestNonRepeatingString
         // Result
         int res = 0;
 
-        Set<Character> set = new HashSet<>();
-        set.add('a');
-
-        set.clear();
-
         for(int i = 0; i < n; i++)
         {
 
@@ -25,6 +20,7 @@ public class LongestNonRepeatingString
             for(int j = i; j < n; j++)
             {
 
+                // priyanika
                 // If current character is visited
                 // Break the loop
                 if (visited[str.charAt(j)] == true)
@@ -35,7 +31,7 @@ public class LongestNonRepeatingString
                     // current character as visited.
                 else
                 {
-                    res = Math.max(res, j - i + 1);
+                    res = Math.max(res, j - i + 1); // 6
                     visited[str.charAt(j)] = true;
                 }
             }

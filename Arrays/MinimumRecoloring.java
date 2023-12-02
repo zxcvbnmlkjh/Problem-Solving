@@ -10,9 +10,9 @@ public class MinimumRecoloring
 {
     public static void main (String[] args)
     {
-        String inputStr = "WBWBBBW";
+        String inputStr = "WBBWWBBWBW";
         MinimumRecoloring minColor = new MinimumRecoloring();
-        int res = minColor.findMinRecolor(inputStr, 2);
+        int res = minColor.findMinRecolor(inputStr, 7);
         System.out.println("Result is "+ res);
     }
     public int findMinRecolor (String inputStr, int size) {

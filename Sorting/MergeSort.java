@@ -2,12 +2,12 @@
 public class MergeSort
 {
     public static void main(String[] args) {
-        int[] arr = {7,3,1,89,44,31,10,8};
+        int[] arr = {38, 27, 43, 10};
         MergeSort merge = new MergeSort();
         for(int num : arr) {
-            System.out.println("Element in an Array is:" + num);
+            System.out.print( num + " ");
         }
-        merge.sort(arr,0,arr.length-1);
+        merge.sort(arr,arr.length-1);
         merge.printArray(arr);
     }
     public void printArray(int[] arr) {
@@ -15,27 +15,27 @@ public class MergeSort
             System.out.print("Element in an Array is:" + arr[i]);
         }
     }
-    public void sort(int[] arr, int start, int end)
+    public void sort(int[] arr, int len)
     {
-        if(start<end)
-        {
-            int mid = start+end/2;
+
+            int mid = len /2;
+            int p = 0;
             int k=0;
-            int n = mid-start+1;
-            int m = end-mid;
-            int[] leftArr = new int[n];
-            int[] rightArr = new int[m];
-            for(int i=0;i<=mid;i++){
+            int[] leftArr = new int[mid];
+            int[] rightArr = new int[len-mid];
+        for(int i = 0;i<len;++i){
+            if(i<mid){
                 leftArr[i] = arr[i];
             }
-            for(int j=mid+1;j<=end;j++){
-                rightArr[k] = arr[j];
-                k++;
+            else{
+                rightArr[k] = arr[i];
+                k = k+1;
             }
-            sort(arr, start, mid);
-            sort(arr,mid+1, end);
-            merge(arr,leftArr, rightArr);
         }
+            sort(leftArr,  mid);
+            sort(rightArr,len-mid);
+            merge(arr,leftArr, rightArr);
+
     }
     public void merge(int[] arr, int[] leftArr, int[] rightArr)
     {

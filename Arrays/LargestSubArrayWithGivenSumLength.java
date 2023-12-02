@@ -1,13 +1,13 @@
 /**
  * get the count of subArrays which are giving a sum of 15.
  */
-public class LargestSumSubArrayLength
+public class LargestSubArrayWithGivenSumLength
 {
     public static void main (String[] args)
     {
         int[] arr = {10, 5, 2, 7, 1, 9};
         int k = 15;
-        LargestSumSubArrayLength largestSumSubArray = new LargestSumSubArrayLength();
+        LargestSubArrayWithGivenSumLength largestSumSubArray = new LargestSubArrayWithGivenSumLength();
         System.out.println("Count is "+ largestSumSubArray.findCount(arr, k));
 
     }

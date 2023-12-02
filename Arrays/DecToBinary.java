@@ -4,7 +4,7 @@ import java.util.List;
 public class DecToBinary
 {
     public static void main(String[] args) {
-        int num = 2;
+        int num = 12;
         DecToBinary dec = new DecToBinary();
         List<Integer> resultList = dec.decimalToBinary(num);
         for(int i=resultList.size()-1;i>=0;i--){

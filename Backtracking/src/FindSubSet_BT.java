@@ -1,3 +1,7 @@
+/**
+ * Rever other solution FindingSubSetPowerSet
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 

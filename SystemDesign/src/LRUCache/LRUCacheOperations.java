@@ -1,3 +1,7 @@
+/**
+ * Instead of using Customized Doubly linked list i can use dequeue as well where i can store keys.
+ * Refer Object pool for this.
+ */
 package LRUCache;
 
 import org.w3c.dom.Node;

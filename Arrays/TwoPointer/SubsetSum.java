@@ -1,3 +1,7 @@
+/**
+ * https://www.geeksforgeeks.org/find-all-subsequences-with-sum-equals-to-k/
+ *
+ */
 package TwoPointer;
 
 import java.util.HashMap;
@@ -27,7 +31,7 @@ public class SubsetSum
 
     public static void main (String[] args)
     {
-        int[] arr = {1,1,1, 1};  // 1 2 3
+        int[] arr = {1,1,1, 4 };  // 1 2 3
         int  k = 2;
         SubsetSum subsetSum = new SubsetSum();
         System.out.println(subsetSum.subarraySum(arr, k));

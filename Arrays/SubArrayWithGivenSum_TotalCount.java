@@ -3,8 +3,8 @@ import java.util.HashMap;
 public class SubArrayWithGivenSum_TotalCount
 {
     public static void main(String[] args) {
-        int[] arr ={4,5,1,3,2,3,4};
-        int k = 9;
+        int[] arr ={ 3, 4, -7, 1, 3, 3, 1, -4 };
+        int k = 7;
         SubArrayWithGivenSum_TotalCount subArrayWithGivenSum_totalCount = new SubArrayWithGivenSum_TotalCount();
         System.out.println("No of count is   "+ subArrayWithGivenSum_totalCount.totalCount(arr, k));
     }
