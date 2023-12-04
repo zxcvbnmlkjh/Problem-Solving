@@ -17,12 +17,12 @@ import java.util.HashMap;
  *  * When we encounter a cumulative sum value which we have already encountered before, which means that sub-array from
  *  * the previous index+1 till the present index has equal number of 0’s and 1’s as they give a cumulative sum of 0 .
  */
-public class CountEqualNumbersBetter
+public class CountEqualNumbersBetter1
 {
     public static void main (String[] args)
     {
         int[] arr = {};
-        CountEqualNumbersBetter countEqualNumbers = new CountEqualNumbersBetter();
+        CountEqualNumbersBetter1 countEqualNumbers = new CountEqualNumbersBetter1();
         System.out.println(countEqualNumbers.findSize(arr));
     }
 

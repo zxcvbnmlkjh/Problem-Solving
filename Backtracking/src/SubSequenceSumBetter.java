@@ -13,9 +13,9 @@ public class SubSequenceSumBetter
     int count = 0;
     public static void main (String[] args)
     {
-        int[] arr = {1,1,2,3,4,5};
+        int[] arr = {10,1,2,7,6,1,5};
         int sum =0;
-        int target = 5;
+        int target = 8;
         SubSequenceSumBetter subSequenceSum = new SubSequenceSumBetter();
         subSequenceSum.findCount(0, arr, new ArrayList<>(), sum, target);
         System.out.println("Count is:"+ subSequenceSum.count);

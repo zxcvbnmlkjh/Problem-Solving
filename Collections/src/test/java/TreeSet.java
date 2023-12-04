@@ -1,5 +1,5 @@
-import java.util.Map;
-import java.util.TreeMap;
+import java.sql.Array;
+import java.util.*;
 
 public class TreeSet
 {
@@ -20,5 +20,25 @@ public class TreeSet
             }
         }
         System.out.println(res);
+
+        List<Integer> list = new ArrayList();
+        list.add(1);
+        list.add(2);
+
+        List<Integer> list1 = new ArrayList();
+        list1.add(1);
+        list1.add(2);
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(2);
+        list2.add(1);
+
+        Set<List<Integer>> set = new HashSet<>();
+        set.add(list);
+        set.add(list1);
+        set.add(list2);
+
+        System.out.println("Set is==== "+ set);
+
     }
 }
