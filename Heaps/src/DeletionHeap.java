@@ -34,7 +34,7 @@ public class DeletionHeap
         System.out.println();
     }
     public static void main(String[] args) {
-        int arr[] = { 10,6,3,5,4,1,2 };
+        int arr[] = { 12,10,6,3,5,4,1,2,11 };
 
         int n = arr.length;
         DeletionHeap delete = new DeletionHeap();

@@ -1,4 +1,3 @@
-/*
 
 public class InsertionHeap
 {
@@ -44,4 +43,3 @@ public class InsertionHeap
         insertion.printArray(arr);
     }
 }
-*/
